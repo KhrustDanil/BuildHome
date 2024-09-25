@@ -1,0 +1,51 @@
+@use "../../presets" as *;
+
+.gallery {
+    margin-top: 1%;
+    padding: 2%;
+
+    &__title {
+        font-size: $font-size * 3;
+    }
+
+
+    &__col {
+        padding: 1%;
+        @media screen and (min-width: 1200px) {
+            width: 80%;
+            
+        } 
+    }
+
+    &__picture--main {
+        width: 90%;
+        min-height: 400px;
+        -webkit-box-shadow: 11px 3px 6px 0px rgba(125,125,125,0.72);
+        -moz-box-shadow: 11px 3px 6px 0px rgba(125,125,125,0.72);
+        box-shadow: 11px 3px 6px 0px rgba(125,125,125,0.72);
+
+        @media screen and (min-width: 1200px) {
+            width: 120%;
+
+        } 
+    }
+
+    &__picture {
+        width: 30%;
+        min-height: 120px;
+    }
+
+    &__picture--secondary {
+        width: 30%;
+        max-height: 220px;
+        min-height: 120px;
+    }
+
+    &__picture--secondary, &__picture {
+        padding: 1%;
+        margin-left: 1%;
+        -webkit-box-shadow: 11px 3px 12px 0px rgba(125,125,125,0.72);
+        -moz-box-shadow: 11px 3px 12px 0px rgba(125,125,125,0.72);
+        box-shadow: 11px 3px 12px 0px rgba(125,125,125,0.72);
+    }
+    }

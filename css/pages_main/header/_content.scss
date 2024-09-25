@@ -1,0 +1,106 @@
+@use "../../presets" as *;
+
+.info {
+    grid-area: 1 / 1;
+    margin-top: 44%;
+    margin-left: 15%;
+
+    @media screen and (min-width: 480px) {
+        margin-top: 40%;
+    } 
+    @media screen and (min-width: 760px) {
+        margin-top: 30%;
+    } 
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        margin-top: 24%;
+    } 
+}
+
+.buy {
+
+    // padding: 25px;
+    // background-color: orange;
+    // border: 1px solid black;
+        margin-top: 10%;
+
+        @media screen and (min-width: 480px) {
+            margin-top: 8%;
+        } 
+        @media screen and (min-width: 760px) {
+            margin-top: 5%;
+        } 
+        @media screen and (min-width: 1200px) {
+            margin-left: 7%;
+            margin-top: 7%;
+        } 
+
+    &__link {
+        width: 90%;
+        padding: 25px;
+        background-color: #e7a61a;
+        border: 1px solid black;
+        color: $color-white;
+        display: flex;
+        justify-content: center;
+        font-size: $font-size * 1.2;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        &:hover {
+            color: $color-secondary;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 280%;
+        }
+    }
+}
+
+.content {
+    @media screen and (min-width: 1200px) {
+        width: 50%;
+    } 
+
+    &__title {
+        text-transform: uppercase;
+        font-size: $font-size * 3;
+        font-weight: bold;
+        width: 100%;
+        color: $color-black;
+        margin-bottom: 3%;
+
+        
+        @media screen and (min-width: 480px) {
+            width: 90%;
+        } 
+        @media screen and (min-width: 760px) {
+            width: 65%;
+        } 
+        @media screen and (min-width: 1200px) {
+            width: 90%;
+        } 
+        @media screen and (min-width: 1440px) {
+            width: 90%;
+        } 
+    }
+
+    &__text {
+        font-size: $font-size * 1.7;
+        color: $color-black;
+        margin-top: 8%;
+        width: 90%;
+
+        @media screen and (min-width: 480px) {
+            width: 75%;
+        } 
+        @media screen and (min-width: 760px) {
+            width: 65%;
+            margin-top: 6%;
+        } 
+        @media screen and (min-width: 1200px) {
+            width: 88%;
+            margin-top: 3%;
+        } 
+    }
+}

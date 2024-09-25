@@ -1,0 +1,138 @@
+@use "../../presets" as *;
+
+
+.open {
+    display: flex !important;
+    flex-direction: column;
+
+}
+
+.navigation {
+    margin-left: 45%;
+
+    @media screen and (max-width: 1200px) {
+        margin-left: 35%;
+        padding-right: 5%;
+    }
+
+    @media screen and (max-width: 760px) {
+        margin-left: 30%;
+    }
+}
+
+.navbar {
+    position: absolute;
+    margin-bottom: 134px;
+
+    &__list {
+        position: relative ;
+        display: flex;
+        flex-wrap: nowrap;
+        -moz-column-gap: 23px;
+             column-gap: 23px;
+
+
+
+    
+        @media screen and (max-width: 760px) {
+            display: none;
+            margin-top: 25%;
+            margin: 0;
+        }
+
+
+        
+    }
+
+    // &__item {
+    // }
+
+    &__link {
+        color: $color-black;
+        padding: $gap-sm;
+        display: block;
+        transition: scale 0.1s;
+        letter-spacing: $letter-spacing;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 400;
+        &__active {
+            color: $color-primary;
+        }
+        
+        &:focus,
+        &:hover {
+            color: $color-primary;
+            font-weight: 500;
+        }
+    }
+
+    &__btn {
+        width: 35px;
+        height: 25px;
+        position: absolute;
+        top: 10px;
+        left: 120px;
+        margin: 0;
+        transform: rotate(0deg);
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+        max-height: 17%;
+
+
+        @media screen and (min-width: 480px) {
+            left: 180px;
+        } 
+
+        @media screen and (min-width: 658px) {
+            left: 280px;
+        } 
+
+        @media screen and (min-width: 760px) {
+            display: none;
+        } 
+
+        &.active span {
+            &:nth-child(1) {
+                top: 9px;
+                transform: rotate(135deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                left: -30px;
+            }
+
+            &:nth-child(3) {
+                top: 9px;
+                transform: rotate(-135deg);
+            }
+        }
+
+        &-row {
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background-color: $color-black;
+            border-radius: 4px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .2s ease-in-out;
+            
+            &:nth-child(1) {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 9px;
+            }
+            &:nth-child(3) {
+                top: 18px;
+            }
+        }
+
+
+    }
+
+}

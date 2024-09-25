@@ -1,0 +1,19 @@
+@use "../presets" as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    font-size: $font-size;
+    font-family: $font-famile;
+    font-weight: normal;
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+}
